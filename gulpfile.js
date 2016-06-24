@@ -8,8 +8,8 @@ var gutil = require('gulp-util');
 
 gulp.task('compile', function(){
     gulp.src('./app/pages/**/*.ejs')
-        .pipe(ejs({
-            ext: 'html'
+        .pipe(ejs({},{
+            ext: '.html'
         }).on('error', gutil.log))
     .pipe(gulp.dest('./www'));
 });
@@ -37,4 +37,5 @@ gulp.task('serve', ['js'], function () {
     gulp.watch("./app/js/**/*.js", ['js']);
     gulp.watch('./app/scss/**/*.scss', ['sass']);
     gulp.watch('./app/pages/**/*.ejs', ['compile']);
+    browserSync.reload();
 });
