@@ -1,0 +1,19 @@
+{
+  "name": "revelation_records",
+  "description": "Static front end for revelation records new main website",
+  "version": "0.0.1",
+  "homepage": "http://revelationrecords.com",
+  "authors": [
+    "Scott Rothman <scott.r.rothman@gmail.com>"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
+    "gulp-ejs": "^2.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.8"
+  },
+  "license": "MIT"
+}
