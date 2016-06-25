@@ -1,0 +1,15 @@
+.upcomming_shows_artist {
+    span, a {
+        display: block;
+        &.date {
+            font-weight: bold;
+        }
+        &.venue {
+            color: #000000;
+            text-decoration: underline;
+        }
+    }
+    .show {
+        margin-bottom: 20px;
+    }
+}
