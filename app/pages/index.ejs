@@ -1,6 +1,18 @@
-<html>
-    <head></head>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
-</html>
+<%- include('../partials/globals/top.ejs') -%>
+<%- include('../partials/globals/header.ejs') -%>
+<div class="container">
+  <div class="row">
+    <div class="left_col col-md-8 col-xs-12">
+      <%- include('../partials/home_articles.ejs') -%>
+      <%- include('../partials/upcomming_shows_home.ejs') -%>
+    </div>
+    <div class="right_col col-md-4 col-xs-12">
+      <%- include('../partials/new_releases.ejs') -%>
+      <%- include('../partials/featured_artist.ejs') -%>
+      <%- include('../partials/staff_suggests.ejs') -%>
+      <%- include('../partials/picture_of_the_day.ejs') -%>
+    </div>
+  </div>
+</div>
+<%- include('../partials/globals/footer.ejs') -%>
+<%- include('../partials/globals/bottom.ejs') -%>

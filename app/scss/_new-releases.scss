@@ -1,0 +1,23 @@
+.new_releases {
+  & .release {
+    width: 46%;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    &:nth-of-type(2n) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2n+1) {
+      margin-right: 0;
+    }
+    &:first-of-type {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+}

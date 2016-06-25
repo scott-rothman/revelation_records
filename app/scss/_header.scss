@@ -1,0 +1,38 @@
+header {
+  margin-bottom: 20px;
+  height: 300px;
+  border-bottom: solid #FFFFFF 2px;
+  background: $yellow;
+}
+nav {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  & a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000000;
+    &.active {
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        bottom: -5px;
+        background: #000000;
+      }
+    }
+  }
+}
+& .store_link {
+  display: block;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background: $blue;
+}

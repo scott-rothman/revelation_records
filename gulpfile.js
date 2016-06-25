@@ -12,12 +12,14 @@ gulp.task('compile', function(){
             ext: '.html'
         }).on('error', gutil.log))
     .pipe(gulp.dest('./www'));
+    return browserSync.reload();
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./app/scss/main.scss')
+  gulp.src('./app/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./www/css'));
+   return browserSync.reload(); 
 });
 
 gulp.task('js', function() {
@@ -36,6 +38,5 @@ gulp.task('serve', ['js'], function () {
     // all browsers reload after tasks are complete.
     gulp.watch("./app/js/**/*.js", ['js']);
     gulp.watch('./app/scss/**/*.scss', ['sass']);
-    gulp.watch('./app/pages/**/*.ejs', ['compile']);
-    browserSync.reload();
+    gulp.watch('./app/**/*.ejs', ['compile']);
 });

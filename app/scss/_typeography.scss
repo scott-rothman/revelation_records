@@ -1,0 +1,29 @@
+h1, h3 {
+  margin-top: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+& .eyebrow {
+  &:after {
+    content: ' ';
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: $yellow;
+  }
+}

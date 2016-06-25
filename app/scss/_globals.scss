@@ -1,0 +1,25 @@
+body {
+  background: $dark-grey;
+}
+
+section {
+  padding: 20px;
+  margin-bottom:20px; 
+  background: #FFFFFF;
+  & img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+a.btn {
+  display: inline-block;
+  padding: 10px;
+  background: $blue;
+  border-radius: 0;
+  color: #FFFFFF;
+}
+
+.container {
+  position: relative;
+}
