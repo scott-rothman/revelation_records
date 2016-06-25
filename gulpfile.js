@@ -1,10 +1,12 @@
-var gulp    = require('gulp');
-var sass    = require('gulp-sass');
-var ejs     = require('gulp-ejs');
-var watch   = require('gulp-watch');
-var copy    = require('gulp-copy');
+var gulp      = require('gulp');
+var sass      = require('gulp-sass');
+var ejs        = require('gulp-ejs');
+var watch     = require('gulp-watch');
+var copy      = require('gulp-copy');
+var gutil     = require('gulp-util');
+var flatten   = require('gulp-flatten');
 var browserSync    = require('browser-sync').create();
-var gutil = require('gulp-util');
+
 
 gulp.task('compile', function(){
     gulp.src('./app/pages/**/*.ejs')
@@ -24,7 +26,8 @@ gulp.task('sass', function () {
 
 gulp.task('js', function() {
     return gulp.src('./app/js/**/*.js')
-        .pipe(copy('./www/js'));
+        .pipe(flatten())
+        .pipe(gulp.dest('./www/js'));
 });
 
 gulp.task('serve', ['js'], function () {

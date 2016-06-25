@@ -11,6 +11,7 @@
     "gulp": "^3.9.1",
     "gulp-copy": "0.0.2",
     "gulp-ejs": "^2.1.2",
+    "gulp-flatten": "^0.3.0",
     "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.8"

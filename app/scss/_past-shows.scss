@@ -1,42 +1,53 @@
 .past_shows {
-    & .year {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .year {
+        padding: 10px;
+        margin-bottom: 5px;
+        height: 40px;
         background: $light-grey;
         position: relative;
-        max-height: 50px;
-        min-height: 50px;
-        padding: 20px;
+        font-weight: bold;
+        cursor: pointer;
         &:after {
             content: '+';
-            height: 50px;
-            width: 50px;
-            display: block;
             position: absolute;
-            right: 0;
+            height: 40px;
+            width: 40px;
+            padding-left: 12px;
             top: 0;
-            padding: 5px 0 0 15px;
-            font-size: 28px;
-            background: $blue;
+            right: 0;
+            bottom: 0;
+            font-size: 24px;
             color: #FFFFFF;
+            background: $blue;
         }
-        &.open {
-            max-height: 100000px;
-            & .month {
-                display: block;
-            }
-        }
-    }
-    & .month {
-        display: none;
-        &:first-of-type {
-            padding-top: 20px;
-        }
-        &.open {
-            & .past_show {
-                display: block
-            }
+        &.open:after {
+            content: '-';
+            padding-left: 15px;
         }
     }
-    .past_show {
+    .months {
         display: none;
+        &.open {
+            display: block;
+        }
+        & .month {
+            padding-left: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+    .shows {
+        display: none;
+        &.open {
+            display: block;
+        }
+        & .show {
+            padding-left: 5px;
+            cursor: pointer;
+        }
     }
 }
