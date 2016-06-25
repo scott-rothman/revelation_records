@@ -1,0 +1,42 @@
+.past_shows {
+    & .year {
+        background: $light-grey;
+        position: relative;
+        max-height: 50px;
+        min-height: 50px;
+        padding: 20px;
+        &:after {
+            content: '+';
+            height: 50px;
+            width: 50px;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 5px 0 0 15px;
+            font-size: 28px;
+            background: $blue;
+            color: #FFFFFF;
+        }
+        &.open {
+            max-height: 100000px;
+            & .month {
+                display: block;
+            }
+        }
+    }
+    & .month {
+        display: none;
+        &:first-of-type {
+            padding-top: 20px;
+        }
+        &.open {
+            & .past_show {
+                display: block
+            }
+        }
+    }
+    .past_show {
+        display: none;
+    }
+}

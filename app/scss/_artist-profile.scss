@@ -1,0 +1,23 @@
+.artist_profile {
+    .band_photo {
+        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+    }
+    p {
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+    & .artist_releases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+
+        & .artist_release {
+            flex: 0 0 22%;
+            margin-bottom: 20px;
+        }
+    }
+}
