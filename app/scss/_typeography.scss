@@ -1,25 +1,32 @@
 h1, h3 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 28px;
   text-transform: uppercase;
   position: relative;
+  font-family: 'Open Sans';
+  font-weight: bold;
 }
 
 h2 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 18px;
   text-transform: uppercase;
   position: relative;
+  font-family: 'Open Sans';
+  font-weight: bold;
 }
-
+a {
+  font-family: 'Open Sans';
+}
 p {
   margin-top: 0;
   margin-bottom: 20px;
+  font-family: 'Open Sans';
 }
 
-& .eyebrow {
+& .eyebrow {  
   &:after {
     content: ' ';
     width: 30px;

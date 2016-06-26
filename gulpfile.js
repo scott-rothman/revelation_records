@@ -30,6 +30,12 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./www/js'));
 });
 
+gulp.task('images', function() {
+    return gulp.src('./img/**/*')
+        pipe(flatten())
+        .pipe(gulp.dest('./www/img'));
+})
+
 gulp.task('serve', ['js'], function () {
     // Serve files from the root of this project
     browserSync.init({
@@ -40,6 +46,7 @@ gulp.task('serve', ['js'], function () {
     // add browserSync.reload to the tasks array to make
     // all browsers reload after tasks are complete.
     gulp.watch("./app/js/**/*.js", ['js']);
+    gulp.watch("./app/img/**/*", ['images']);
     gulp.watch('./app/scss/**/*.scss', ['sass']);
     gulp.watch('./app/**/*.ejs', ['compile']);
 });
