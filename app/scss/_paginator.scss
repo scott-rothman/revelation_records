@@ -7,8 +7,11 @@
     cursor: pointer;
     &.active {
       & .bar {
-        background: $blue;
+        background: $blue !important;
       }
+    }
+    &:hover .bar {
+      background: #a2c7f3;
     }
   }
   & .bar {

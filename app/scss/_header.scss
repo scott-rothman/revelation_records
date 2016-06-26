@@ -5,23 +5,56 @@ header {
   background: $yellow;
 }
 nav {
-  width: 800px;
-  margin: 0 auto;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+  background: $yellow;
+  z-index: 100;
+  &.open {
+    display: block;
+  }
   & a {
-    text-transform: uppercase;
-    font-weight: bold;
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 75px;
+    height: 75px;
     color: #000000;
-    &.active {
-      &:after {
-        content: ' ';
-        position: absolute;
-        width: 100%;
-        height: 5px;
-        bottom: -5px;
-        background: #000000;
+    padding-bottom: 20px;
+    border-top: solid black 1px;
+    margin-left: 10%;
+    
+    &:last-of-type {
+      border-bottom: solid black 1px;
+
+    }
+  }
+  @media all and (min-width: 992px) {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    & a {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #000000;
+      &.active {
+        &:after {
+          content: ' ';
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          bottom: -5px;
+          background: #000000;
+        }
       }
     }
   }
@@ -35,4 +68,25 @@ nav {
   color: #FFFFFF;
   text-transform: uppercase;
   background: $blue;
+}
+& .hamburger {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  z-index: 101;
+  padding-top: 15px;
+  padding-left: 15px;
+  background: $blue;
+  @media all and (min-width: 992px) {
+    display: none;  
+  }
+  & .bar {
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: #FFFFFF;
+  }
 }
