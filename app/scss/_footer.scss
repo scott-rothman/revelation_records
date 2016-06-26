@@ -1,4 +1,58 @@
 footer {
   height: 250px;
+  padding-top: 20px;
   background: $yellow;
+  text-align: center;
+  @media all and (min-width: 992px) {
+    text-align: left;
+  }
+  & label {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    @media all and (min-width: 992px) {
+        text-align: left;
+    }
+  }
+  & form {
+    width: 205px;
+    margin: 0 auto; 
+    padding-top: 20px;
+    margin-bottom: 20px;
+    @media all and (min-width: 992px) {
+        width: auto;
+    }
+  }
+  & .social_icons {
+    width: 250px;
+   margin: 0 auto; 
+    @media all and (min-width: 992px) {
+        float: right;
+        clear: both;
+    }
+  }
+  & .disclaimer {
+    margin: 0 auto;
+    text-align: center;
+    @media all and (min-width: 992px) {
+        float: right;
+        clear: both;
+        text-align: right;
+    }
+  }
+  input[type='email'] {
+    border: 0;
+    box-shadow: none;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  input[type='submit'] {
+    background: $blue;
+    border: 0;
+    box-shadow: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
