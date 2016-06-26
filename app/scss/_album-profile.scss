@@ -1,0 +1,23 @@
+.album_profile {
+    & ul {
+        list-style: none;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        & li {
+            font-family: "Open Sans";
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    }
+    & .artist_releases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+
+        & .artist_release {
+            flex: 0 0 22%;
+            margin-bottom: 20px;
+        }
+    }
+}
