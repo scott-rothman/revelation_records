@@ -5,11 +5,21 @@
   td {
     padding-top: 2px;
     padding-bottom: 2px;
+    @media all and (max-width: 991px) {
+        width: 100%;
+        display: block;
+        &:last-of-type {
+          padding-bottom: 20px;
+        }
+      }
   }
   tr.artist {
     & td {
       padding-top: 20px;
       font-weight: bold;
+      @media all and (max-width: 991px) {
+        padding-top: 10px;
+      }
     }
     &:first-of-type {
       td {

@@ -6,8 +6,12 @@
     max-width: 100%;
   }
   span {
-    display: inline-block;
-    padding: 20px;
+    display: block;
+    padding: 20px 20px 0 20px;
     color: #000000;
+    text-align: left;
+    &:last-of-type {
+      padding-bottom: 20px;
+    }
   }
 }

@@ -1,0 +1,67 @@
+.image_slider {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    @media all and (min-width: 992px) {
+        overflow: hidden;
+    }
+    & img {
+        max-width: 100%;
+    }
+    & .image_wrapper {
+        height: 100px;
+        overflow-x: scroll;
+        white-space: nowrap;
+        transition: left 1s ease-in-out;
+        @media all and (min-width: 992px) {
+            overflow: visible;
+            position: relative;
+            left: 0;
+        }
+        & img {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            margin-right: 20px;
+            &:first-of-type {
+                @media all and (min-width: 992px) {
+                    margin-left: 50px;
+                }
+            }
+            &:last-of-type {
+                margin-right: 0;
+                @media all and (min-width: 992px) {
+                    margin-right: 25px;
+                }
+            }
+        }
+        
+    }
+    & .scroll_control {
+        display: none;
+    }
+    @media all and (min-width: 992px) {
+        & .scroll_control {
+            position: absolute;
+            display: block;
+            height: 100px;
+            width: 25px;
+            background: $blue;
+            cursor: pointer;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 38px;
+            padding-top: 20px;
+        }
+        & .scroll_left {
+            left: 0;
+            bottom: 0;
+            padding-left: 8px;
+        }
+        & .scroll_right {
+            right: 0;
+            bottom: 0;
+            padding-left: 8px;
+        }
+    }
+}

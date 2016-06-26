@@ -1,6 +1,14 @@
-<a href="#">
+<a href="<%- url -%>">
   <div class="card">
-    <img src="img/image.png" alt="">
-    <span class="label">Beyond.</span>
+    <img src="<%- image -%>" alt="">
+    <% if(id) { %>
+        <span class="label"><%- id -%></span>    
+    <% } %>
+    <% if(artist) { %>
+        <span class="label"><%- artist -%></span>    
+    <% } %>
+    <% if(name) { %>
+        <span class="label"><%- name -%></span>
+    <% } %>
   </div>
 </a>
