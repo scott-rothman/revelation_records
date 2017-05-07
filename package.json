@@ -8,6 +8,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-copy": "0.0.2",
     "gulp-ejs": "^2.1.2",
